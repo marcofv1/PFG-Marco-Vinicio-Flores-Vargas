@@ -136,38 +136,38 @@ const float ESP_P28[] = {2,2,2,2,2,2,2};
 const float ESP_P29[] = {2,5,2,5,2,5,2,5,2};
 const float ESP_P30[] = {2,5,2,5,2,5,2,5,2};
 
-// ---- RECETAS (totalAgujeros = bandas, offsetInicial = L en ponchador) ----
+// ---- RECETAS (totalAgujeros = perforaciones = bandas - 1) ----
 //                nombre      holes  Fr  L    espaciados
-const Receta PARTE1  = {"PARTE1",  10, 6,  9, ESP_P1};   // 10B F6 L=9  esp=5mm
-const Receta PARTE2  = {"PARTE2",  10, 6, 35, ESP_P2};   // 10B F6 L=35 esp=2/5
-const Receta PARTE3  = {"PARTE3",  10, 6,  9, ESP_P3};   // 10B F6 L=9  esp=2/5
-const Receta PARTE4  = {"PARTE4",  20, 6, 18, ESP_P4};   // 20B F6 L=18 esp=2mm
-const Receta PARTE5  = {"PARTE5",  10, 6, 18, ESP_P5};   // 10B F6 L=18 esp=2mm
-const Receta PARTE6  = {"PARTE6",  10, 6, 16, ESP_P6};   // 10B F6 L=16 variable
-const Receta PARTE7  = {"PARTE7",  10, 5, 19, ESP_P7};   // 10B F5 L=19 esp=4mm
-const Receta PARTE8  = {"PARTE8",  10, 5, 18, ESP_P8};   // 10B F5 L=18 esp=2/8
-const Receta PARTE9  = {"PARTE9",  10, 5, 21, ESP_P9};   // 10B F5 L=21 esp=2mm
-const Receta PARTE10 = {"PARTE10",  4, 5, 19, ESP_P10};  // 4B  F5 L=19 esp=5mm
-const Receta PARTE11 = {"PARTE11",  4, 4, 17, ESP_P11};  // 4B  F4 L=17 esp=5mm
-const Receta PARTE12 = {"PARTE12", 10, 6, 28, ESP_P12};  // 10B F6 L=28 esp=2/5
-const Receta PARTE13 = {"PARTE13", 10, 5, 37, ESP_P13};  // 10B F5 L=37 esp=2/5
-const Receta PARTE14 = {"PARTE14",  4, 5,  7, ESP_P14};  // 4B  F5 L=7  esp=2/5
-const Receta PARTE15 = {"PARTE15",  4, 6, 37, ESP_P15};  // 4B  F6 L=37 esp=5mm
-const Receta PARTE16 = {"PARTE16",  4, 6,  9, ESP_P16};  // 4B  F6 L=9  esp=5mm
-const Receta PARTE17 = {"PARTE17",  4, 6, 37, ESP_P17};  // 4B  F6 L=37 esp=2/5
-const Receta PARTE18 = {"PARTE18",  4, 6,  9, ESP_P18};  // 4B  F6 L=9  esp=2/5
-const Receta PARTE19 = {"PARTE19",  4, 5, 35, ESP_P19};  // 4B  F5 L=35 esp=2/5
-const Receta PARTE20 = {"PARTE20",  4, 5, 35, ESP_P20};  // 4B  F5 L=35 esp=5mm
-const Receta PARTE21 = {"PARTE21", 10, 5, 18, ESP_P21};  // 10B F5 L=18 esp=2/5
-const Receta PARTE22 = {"PARTE22", 10, 5, 37, ESP_P22};  // 10B F5 L=37 variable
-const Receta PARTE23 = {"PARTE23",  8, 6, 34, ESP_P23};  // 8B  F6 L=34 esp=2mm
-const Receta PARTE24 = {"PARTE24",  8, 6, 10, ESP_P24};  // 8B  F6 L=10 esp=2/5
-const Receta PARTE25 = {"PARTE25", 10, 6, 13, ESP_P25};  // 10B F6 L=13 esp=2mm
-const Receta PARTE26 = {"PARTE26", 10, 4, 41, ESP_P26};  // 10B F4 L=41 esp=2mm
-const Receta PARTE27 = {"PARTE27", 10, 4, 19, ESP_P27};  // 10B F4 L=19 esp=2/5
-const Receta PARTE28 = {"PARTE28",  8, 5, 36, ESP_P28};  // 8B  F5 L=36 esp=2mm
-const Receta PARTE29 = {"PARTE29", 10, 6,  8, ESP_P29};  // 10B F6 L=8  esp=2/5
-const Receta PARTE30 = {"PARTE30", 10, 5, 18, ESP_P30};  // 10B F5 L=18 esp=2/5 (num.parte alt.)
+const Receta PARTE1  = {"PARTE1",   9, 6,  9, ESP_P1};   // 10B F6 L=9  esp=5mm
+const Receta PARTE2  = {"PARTE2",   9, 6, 35, ESP_P2};   // 10B F6 L=35 esp=2/5
+const Receta PARTE3  = {"PARTE3",   9, 6,  9, ESP_P3};   // 10B F6 L=9  esp=2/5
+const Receta PARTE4  = {"PARTE4",  19, 6, 18, ESP_P4};   // 20B F6 L=18 esp=2mm
+const Receta PARTE5  = {"PARTE5",   9, 6, 18, ESP_P5};   // 10B F6 L=18 esp=2mm
+const Receta PARTE6  = {"PARTE6",   9, 6, 16, ESP_P6};   // 10B F6 L=16 variable
+const Receta PARTE7  = {"PARTE7",   9, 5, 19, ESP_P7};   // 10B F5 L=19 esp=4mm
+const Receta PARTE8  = {"PARTE8",   9, 5, 18, ESP_P8};   // 10B F5 L=18 esp=2/8
+const Receta PARTE9  = {"PARTE9",   9, 5, 21, ESP_P9};   // 10B F5 L=21 esp=2mm
+const Receta PARTE10 = {"PARTE10",  3, 5, 19, ESP_P10};  // 4B  F5 L=19 esp=5mm
+const Receta PARTE11 = {"PARTE11",  3, 4, 17, ESP_P11};  // 4B  F4 L=17 esp=5mm
+const Receta PARTE12 = {"PARTE12",  9, 6, 28, ESP_P12};  // 10B F6 L=28 esp=2/5
+const Receta PARTE13 = {"PARTE13",  9, 5, 37, ESP_P13};  // 10B F5 L=37 esp=2/5
+const Receta PARTE14 = {"PARTE14",  3, 5,  7, ESP_P14};  // 4B  F5 L=7  esp=2/5
+const Receta PARTE15 = {"PARTE15",  3, 6, 37, ESP_P15};  // 4B  F6 L=37 esp=5mm
+const Receta PARTE16 = {"PARTE16",  3, 6,  9, ESP_P16};  // 4B  F6 L=9  esp=5mm
+const Receta PARTE17 = {"PARTE17",  3, 6, 37, ESP_P17};  // 4B  F6 L=37 esp=2/5
+const Receta PARTE18 = {"PARTE18",  3, 6,  9, ESP_P18};  // 4B  F6 L=9  esp=2/5
+const Receta PARTE19 = {"PARTE19",  3, 5, 35, ESP_P19};  // 4B  F5 L=35 esp=2/5
+const Receta PARTE20 = {"PARTE20",  3, 5, 35, ESP_P20};  // 4B  F5 L=35 esp=5mm
+const Receta PARTE21 = {"PARTE21",  9, 5, 18, ESP_P21};  // 10B F5 L=18 esp=2/5
+const Receta PARTE22 = {"PARTE22",  9, 5, 37, ESP_P22};  // 10B F5 L=37 variable
+const Receta PARTE23 = {"PARTE23",  7, 6, 34, ESP_P23};  // 8B  F6 L=34 esp=2mm
+const Receta PARTE24 = {"PARTE24",  7, 6, 10, ESP_P24};  // 8B  F6 L=10 esp=2/5
+const Receta PARTE25 = {"PARTE25",  9, 6, 13, ESP_P25};  // 10B F6 L=13 esp=2mm
+const Receta PARTE26 = {"PARTE26",  9, 4, 41, ESP_P26};  // 10B F4 L=41 esp=2mm
+const Receta PARTE27 = {"PARTE27",  9, 4, 19, ESP_P27};  // 10B F4 L=19 esp=2/5
+const Receta PARTE28 = {"PARTE28",  7, 5, 36, ESP_P28};  // 8B  F5 L=36 esp=2mm
+const Receta PARTE29 = {"PARTE29",  9, 6,  8, ESP_P29};  // 10B F6 L=8  esp=2/5
+const Receta PARTE30 = {"PARTE30",  9, 5, 18, ESP_P30};  // 10B F5 L=18 esp=2/5 (num.parte alt.)
 
 // Lista de todas las recetas
 const Receta* recetas[] = {
@@ -714,3 +714,4 @@ void loop() {
             break;
     }
 }
+
