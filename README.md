@@ -3,15 +3,26 @@
 Instituto Tecnológico de Costa Rica  
 Marco Vinicio Flores Vargas | 2019232427
 
+---
 
+## Descripción
+
+Sistema automatizado para el perforado de catéteres de diagnóstico en el departamento de Electrofisiología de una empresa de manufactura de dispositivos médicos. El sistema reemplaza el proceso manual de ponchado unitario y secuencial por un proceso automatizado que procesa **5 unidades simultáneamente** con reducciones de tiempo de ciclo de entre el 90% y el 95% respecto al proceso manual.
+
+---
 
 ## Contenido del repositorio
+
+```
 ponchado-automatico/
 ├── firmware/
 │   └── ponchado_firmware.ino    # Firmware Teensy 4.1
 ├── gui/
 │   └── ponchado_gui.py          # Interfaz gráfica Python
 └── README.md
+```
+
+---
 
 ## Hardware
 
@@ -24,6 +35,8 @@ ponchado-automatico/
 | LJ12A3-4-Z/BX | Sensor inductivo de presencia × 4 |
 | PC817 | Módulo optoacoplador 8 canales |
 | Fuente 36V 600W | Alimentación de motores |
+
+---
 
 ## Firmware (Teensy 4.1)
 
@@ -47,25 +60,28 @@ ponchado-automatico/
 | `PARTEn` | Selecciona receta n (1–30) |
 
 ### Máquina de estados
-
+```
 HOMING → ESPERANDO → MOVIENDO_MESA → PERFORANDO → FIN
                 ↑___________________________|
                            ERROR (desde cualquier estado via STOP)
+```
 
 ### Recetas disponibles
 El firmware incluye **30 recetas** correspondientes a los números de parte activos en producción, con configuraciones de 4, 8, 10 y 20 bandas en calibres French 4, 5 y 6.
+
+---
 
 ## Interfaz gráfica (Python)
 
 ### Requisitos
 ```bash
 pip install pyserial keyboard tkinter
-
+```
 
 ### Uso
 ```bash
 python gui/ponchado_gui.py
-
+```
 
 ### Funcionalidad
 - Detección automática de escaneo de código de barras (dispositivo HID)
@@ -80,7 +96,9 @@ En `ponchado_gui.py` ajustar:
 PUERTO_SERIAL = 'COM3'    # Puerto del Teensy (Windows) o '/dev/ttyACM0' (Linux)
 BAUDRATE = 115200
 BARCODE_TIMEOUT = 0.1     # Segundos entre caracteres del scanner
+```
 
+---
 
 ## Parámetros mecánicos clave
 
@@ -93,13 +111,18 @@ BARCODE_TIMEOUT = 0.1     # Segundos entre caracteres del scanner
 | Profundidad extra F5 | 4.6 mm |
 | Profundidad extra F4 | 4.7 mm |
 
+---
+
 
 ## Licencia
 
 Proyecto académico — Instituto Tecnológico de Costa Rica.  
 Uso restringido a fines educativos y de investigación.
 
+---
+
 ## Contacto
 
-Marco Vinicio Flores Vargas  
+Marco Vinicio Flores Vargas 
+marcof@estudiantec.cr
 Escuela de Ingeniería Mecatrónica — TEC  
