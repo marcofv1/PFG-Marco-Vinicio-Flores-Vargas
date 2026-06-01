@@ -7,7 +7,7 @@ Requisitos:
     pip install pyserial
 
 Uso:
-    GUI.py
+    python ponchado_gui.py
 
 El scanner de codigo de barras debe estar conectado por USB
 y configurado para terminar cada lectura con Enter.
@@ -384,7 +384,10 @@ class PonchadoApp(tk.Tk):
 
         # ── Actualizar agujero ─────────────────────────────
         # "[INFO]  Agujero  : 3/9"
-        m = re.search(r"Agujero\s*:\s*(\d+)/(\d+)", line)
+        # Captura: "[INFO]  Agujero  : 3/9", "[INFO]  Agujero 3/9 ->", "[STATUS] ESTADO 3/9"
+        m = re.search(r"Agujero[\s:]+([0-9]+)/([0-9]+)", line)
+        if not m:
+            m = re.search(r"\[STATUS\]\s+\w+\s+([0-9]+)/([0-9]+)", line)
         if m:
             actual = int(m.group(1))
             total  = int(m.group(2))
