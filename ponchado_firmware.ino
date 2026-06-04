@@ -75,15 +75,15 @@ namespace Vel {
 //   PARAMETROS DE PROCESO
 // ============================================================
 
-const int   MM_EXTRA_PERFORACION = 4.0f;
+const int   MM_EXTRA_PERFORACION = 4.5f;
 const int   RETROCESO_HOMING     = 1200;
 const int   DEBOUNCE_MS          = 2;
 
 float calcularExtraPerforacion(uint8_t french) {
     switch (french) {
         case 6: return 4.5f;
-        case 5: return 4.6f;
-        case 4: return 4.7f;
+        case 5: return 4.8f;
+        case 4: return 5.1f;
         default: return MM_EXTRA_PERFORACION;
     }
 }
